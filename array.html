@@ -99,6 +99,31 @@
 
         */
 
+
+
+        var jawaban2 = ''
+
+        // Code kamu di sini, lakukan looping terhadap input di atas
+
+        function dataHandling(data) {
+
+            for (let i = 0; i < data.length; i++) {
+                for (let j = 0; j < data.length; j++) {
+                    var id = 'Nomor ID: ' + data[i][j] + "<br>";
+                    j += 1;
+                    var name = 'Nama Lengkap: ' + data[i][j] + "<br>";
+                    j += 1;
+                    var ttl = 'TTL: ' + data[i][j] + ' ' + data[i][j + 1] + "<br>";
+                    j += 2;
+                    var hobi = 'Hobi: ' + data[i][j] + "<br><br>";
+
+                    jawaban2 += id + name + ttl + hobi;
+                }
+
+            }
+
+        }
+
         var input = [
             ["0001", "Roman Alamsyah", "Bandar Lampung", "21/05/1989", "Membaca"],
             ["0002", "Dika Sembiring", "Medan", "10/10/1992", "Bermain Gitar"],
@@ -106,24 +131,7 @@
             ["0004", "Bintang Senjaya", "Martapura", "6/4/1970", "Berkebun"]
         ];
 
-        var jawaban2 = ''
-
-        // Code kamu di sini, lakukan looping terhadap input di atas
-
-        for (let i = 0; i < input.length; i++) {
-            for (let j = 0; j < input.length; j++) {
-                var id = 'Nomor ID: ' + input[i][j] + "<br>";
-                j += 1;
-                var name = 'Nama Lengkap: ' + input[i][j] + "<br>";
-                j += 1;
-                var ttl = 'TTL: ' + input[i][j] + ' ' + input[i][j + 1] + "<br>";
-                j += 2;
-                var hobi = 'Hobi: ' + input[i][j] + "<br><br>";
-
-                jawaban2 += id + name + ttl + hobi;
-            }
-
-        }
+        dataHandling(input);
 
         document.getElementById("jawaban2").innerHTML = jawaban2
     </script>
